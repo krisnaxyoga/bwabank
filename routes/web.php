@@ -18,7 +18,7 @@ use App\Http\Controllers\Admin\RedirectPaymentController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('/', [AuthController::class, 'index'])->name('admin.auth.index');
 Route::group(['prefix' => 'admin'], function () {
     
     Route::get('login', [AuthController::class, 'index'])->name('admin.auth.index');
